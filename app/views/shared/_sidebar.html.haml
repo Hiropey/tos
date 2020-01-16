@@ -4,7 +4,7 @@
   %nav#sidebar.sidebar-wrapper
     .sidebar-content
       .sidebar-brand
-        %a{:href => "#"} pro sidebar
+        %a{:href => "#"} メニュー
         #close-sidebar
           %i.fas.fa-times
       .sidebar-header
@@ -26,6 +26,7 @@
             .input-group-append
               %span.input-group-text
                 %i.fa.fa-search{"aria-hidden" => "true"}
+
       / sidebar-search
       .sidebar-menu
         %ul
@@ -33,37 +34,22 @@
             %span General
           %li.sidebar-dropdown
             %a{:href => "#"}
-              %i.fa.fa-tachometer-alt
-              %span Dashboard
-              %span.badge.badge-pill.badge-warning New
+              %i.fa.fa-file-invoice
+              %span AWB
             .sidebar-submenu
               %ul
                 %li
-                  %a{:href => "#"}
-                    Dashboard 1
-                    %span.badge.badge-pill.badge-success Pro
+                  %a{:href => "#"} 一括登録
                 %li
-                  %a{:href => "#"} Dashboard 2
+                  %a{:href => "#"} 個別登録
                 %li
-                  %a{:href => "#"} Dashboard 3
+                  %a{:href => "#"} Bar chart
+                %li
+                  %a{:href => "#"} Histogram
           %li.sidebar-dropdown
             %a{:href => "#"}
-              %i.fa.fa-shopping-cart
-              %span E-commerce
-              %span.badge.badge-pill.badge-danger 3
-            .sidebar-submenu
-              %ul
-                %li
-                  %a{:href => "#"}
-                    Products
-                %li
-                  %a{:href => "#"} Orders
-                %li
-                  %a{:href => "#"} Credit cart
-          %li.sidebar-dropdown
-            %a{:href => "#"}
-              %i.far.fa-gem
-              %span Components
+              %i.fas.fa-cube
+              %span ULD
             .sidebar-submenu
               %ul
                 %li
@@ -78,22 +64,33 @@
                   %a{:href => "#"} Forms
           %li.sidebar-dropdown
             %a{:href => "#"}
-              %i.fa.fa-chart-line
-              %span Charts
+              %i.fa.fa-plane-arrival
+              %span 到着便
             .sidebar-submenu
               %ul
                 %li
-                  %a{:href => "#"} Pie chart
+                  %a{:href => "#"} 到着便詳細
                 %li
-                  %a{:href => "#"} Line chart
+                  %a{:href => "#"} FFM登録
                 %li
-                  %a{:href => "#"} Bar chart
-                %li
-                  %a{:href => "#"} Histogram
+                  %a{:href => "#"} Dashboard 3
           %li.sidebar-dropdown
             %a{:href => "#"}
-              %i.fa.fa-globe
-              %span Maps
+              %i.fa.fa-truck
+              %span トラック便
+            .sidebar-submenu
+              %ul
+                %li
+                  %a{:href => "#"}
+                    Products
+                %li
+                  %a{:href => "#"} Orders
+                %li
+                  %a{:href => "#"} Credit cart
+          %li.sidebar-dropdown
+            %a{:href => "#"}
+              %i.fa.fa-cog
+              %span 各種設定
             .sidebar-submenu
               %ul
                 %li
@@ -105,27 +102,35 @@
           %li
             %a{:href => "#"}
               %i.fa.fa-book
-              %span Documentation
-              %span.badge.badge-pill.badge-primary Beta
+              %span ドキュメント
+              %span.badge.badge-pill.badge-danger 2
           %li
             %a{:href => "#"}
               %i.fa.fa-calendar
-              %span Calendar
+              %span スケジュール
           %li
             %a{:href => "#"}
-              %i.fa.fa-folder
-              %span Examples
+              %i.fa.fa-bell
+              %span お知らせ
+          %li
+            %a{:href => "#"}
+              %i.fa.fa-chart-bar
+              %span 統計情報
+          %li
+            %a{:href => "#"}
+              %i.fa.fa-user
+              %span ユーザー管理
       / sidebar-menu
     / sidebar-content
-    .sidebar-footer
-      %a{:href => "#"}
-        %i.fa.fa-bell
-        %span.badge.badge-pill.badge-warning.notification 3
-      %a{:href => "#"}
-        %i.fa.fa-envelope
-        %span.badge.badge-pill.badge-success.notification 7
-      %a{:href => "#"}
-        %i.fa.fa-cog
-        %span.badge-sonar
-      %a{:href => "#"}
-        %i.fa.fa-power-off
+    -# .sidebar-footer
+    -#   %a{:href => "#"}
+    -#     %i.fa.fa-bell
+    -#     %span.badge.badge-pill.badge-warning.notification 3
+    -#   %a{:href => "#"}
+    -#     %i.fa.fa-
+    -#     %span.badge.badge-pill.badge-success.notification 7
+    -#   %a{:href => "#"}
+    -#     %i.fa.fa-cog
+    -#     %span.badge-sonar
+    -#   %a{:href => "#"}
+    -#     %i.fa.fa-power-off

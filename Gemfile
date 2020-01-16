@@ -55,3 +55,4 @@ gem 'devise'
 gem 'cancancan'
 gem 'haml-rails'
 gem "font-awesome-sass"
+gem 'bootstrap-sass', '~> 3.3.7'
