@@ -1,0 +1,22 @@
+= form_for @awb, url: airwaybills_path, method: :post do |f|
+  .form-group
+    %label AWB No.
+    %span.form-require 必須
+    %br
+    = f.text_field :prefix, placeholder:"例) 123",class:"input-default"
+    %br
+    = f.text_field :suffix, placeholder:"例) 22223333",class:"input-default"
+  .form-group
+    %label ORG / DST
+    %span.form-require 必須
+    = f.text_field :org, placeholder:"例) CDG",class:"input-default"
+    = f.text_field :dst, placeholder:"例) NRT",class:"input-default"
+  .form-group
+    %label PCS / WGT / VOL / 品名
+    %span.form-require 必須
+    %br
+    = f.text_field :pcs, placeholder:"例) 12",class:"input-default"
+    = f.text_field :wgt, placeholder:"例) 180.5",class:"input-default"
+    = f.text_field :vol, placeholder:"例) 1.8",class:"input-default"
+    = f.text_field :description, placeholder:"例) CONSOL",class:"input-default"
+    = f.submit "登録する", class: "btn-red"

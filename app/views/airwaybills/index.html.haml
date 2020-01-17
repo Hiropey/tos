@@ -14,3 +14,14 @@
 
   .main-content
     .main-content__body
+      %table.table-responsive
+        - @awbs.each do |awb|
+          = awb.prefix + " -"
+          = awb.suffix
+          = awb.org
+          = awb.dst
+          = awb.pcs.to_s + "Pcs"
+          = awb.wgt.to_s + "Kg"
+          = awb.vol.to_s + "M3"
+          = awb.description
+          %br

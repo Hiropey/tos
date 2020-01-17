@@ -1,0 +1,2 @@
+class Awb < ApplicationRecord
+end
