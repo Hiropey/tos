@@ -1,27 +1,47 @@
+.body
+  .container
+    .content-main.clearfix
+      .main-header
+        .main-header__title
+          %span TOS SYSTEM (仮)
+      = render "shared/sidebar"
 
-.content-main.clearfix
-  .main-header
-    .main-header__title
-      %span TOS SYSTEM (仮)
-  = render "shared/sidebar"
+      .search-header
+        .search-header__main
+          .search-header__main-search
+            %input AWB No.
+            %input Flight No.
+            %input
 
-  .search-header
-    .search-header__main
-      .search-header__main-search
-        %input AWB No.
-        %input Flight No.
-        %input
-
-  .main-content
-    .main-content__body
-      %table.table-responsive
-        - @awbs.each do |awb|
-          = awb.prefix + " -"
-          = awb.suffix
-          = awb.org
-          = awb.dst
-          = awb.pcs.to_s + "Pcs"
-          = awb.wgt.to_s + "Kg"
-          = awb.vol.to_s + "M3"
-          = awb.description
-          %br
+      .main-content
+        .main-content__body
+          %table.table-bordered.table-responsive.table-striped
+            %tr
+              %th AWB No.
+              %th 
+              %th 
+              %th ORG
+              %th DST
+              %th Pcs
+              %th Wgt
+              %th Vol
+              %th 品名
+            - @awbs.each do |awb|
+              %tr
+                %td
+                  = awb.prefix
+                %td -
+                %td
+                  = awb.suffix
+                %td
+                  = awb.org
+                %td
+                  = awb.dst
+                %td
+                  = awb.pcs.to_s + "Pcs  "
+                %td
+                  = awb.wgt.to_s + "Kg  "
+                %td
+                  = awb.vol.to_s + "M3  "
+                %td
+                  = awb.description
